@@ -9,26 +9,14 @@ import { FaRegHandshake } from "react-icons/fa6";
 import { GiNetworkBars } from "react-icons/gi";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-// import ProductDashboard from "./EcommerceComponent";
-// import StatsCard from "./StatsComponent";
-// import EventsComponent from "./EventsComponent";
-// import RevenueChart from "../RevenueChart";
-// import ShowEvents from "./ShowEvents";
-// import CreateBlogs from "./BlogsComponent";
-// import ShowBlogs from "./ShowBlogs";
-// import ShowDonations from "./ShowDonations";
-// import CreateStories from "./AddStories";
-// import ShowStories from "./ShowStories";
 import { Link } from "react-router-dom";
-// import AddDonationComponent from "./AddDonationComponent";
 import { MdPermMedia } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
-// import ShowMedia from "./ShowMedia";
-// import AddMediaComponent from "./AddMediaComponent";
-// import ShowOrders from "./ShowOrders";
-// import ShowDonationsOrders from "./ShowDonationsOrders";
-// import AddOfflineClasses from "./AddOfflineClasses";
-// import ShowClasses from "./ShowOfflineClasses";
+import TabNavigation from "./TabNavigation";
+import PurchaseHistory from "./PurchaseHistory";
+import ProfileCard from "./ProfileCard";
+
+
 
 function AdminLayout() {
   const [openMenus, setOpenMenus] = useState({});
@@ -97,273 +85,44 @@ function AdminLayout() {
             </div>
           </div>
         );
-    //   case "Donations":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Donations </span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addDonation"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addDonation")}
-    //             >
-    //               Add Donations
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showDonation"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showDonation")}
-    //             >
-    //               Show Donations
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addDonation" ? (
-    //             <AddDonationComponent />
-    //           ) : (
-    //             <ShowDonations />
-    //           )}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Media":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Media </span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addMedia"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addMedia")}
-    //             >
-    //               Add Media
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showMedia"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showMedia")}
-    //             >
-    //               Show Media
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addMedia" ? (
-    //             <AddMediaComponent />
-    //           ) : (
-    //             <ShowMedia />
-    //           )}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Offline Classes":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Offline Classes </span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addClasses"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addClasses")}
-    //             >
-    //               Add Classes
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showClasses"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showClasses")}
-    //             >
-    //               Show Classes
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addClasses" ? (
-    //             <AddOfflineClasses />
-    //           ) : (
-    //             <ShowClasses />
-    //           )}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Events":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Events</span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addEvent"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addEvent")}
-    //             >
-    //               Add Event
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showEvents"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showEvents")}
-    //             >
-    //               Show Events
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addEvent" ? (
-    //             <EventsComponent />
-    //           ) : (
-    //             <ShowEvents />
-    //           )}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Blogs":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Blogs</span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addBlog"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addBlog")}
-    //             >
-    //               Add blog
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showBlogs"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showBlogs")}
-    //             >
-    //               Show Blogs
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addBlog" ? <CreateBlogs /> : <ShowBlogs />}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Products Orders":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Products Orders</span>
-    //         </div>
-    //         <div className="mt-4">
-    //           <ShowOrders />
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Donations Orders":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Donations Orders</span>
-    //         </div>
-    //         <div className="mt-4">
-    //           <ShowDonationsOrders />
-    //         </div>
-    //       </div>
-    //     );
-
-    //   case "Stories":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <div className="flex justify-between items-center">
-    //           <span className="text-4xl font-bold font-prata">Stories</span>
-    //           <span className="flex gap-4">
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "addStories"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("addStories")}
-    //             >
-    //               Add Stories
-    //             </button>
-    //             <button
-    //               className={`px-4 py-2 rounded-lg flex items-center gap-2 ${
-    //                 activeComponent === "showStories"
-    //                   ? "bg-orange-600"
-    //                   : "bg-orange-500"
-    //               } text-white`}
-    //               onClick={() => setActiveComponent("showStories")}
-    //             >
-    //               Show Stories
-    //             </button>
-    //           </span>
-    //         </div>
-    //         <div className="mt-4">
-    //           {activeComponent === "addStories" ? (
-    //             <CreateStories />
-    //           ) : (
-    //             <ShowStories />
-    //           )}
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Stat Control":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <span className="text-4xl font-bold font-prata">Stats Control </span>
-    //         <div>
-    //           <StatsCard />
-    //         </div>
-    //         <div>
-    //           <RevenueChart />
-    //         </div>
-    //       </div>
-    //     );
-    //   case "E-Commerce":
-    //     return (
-    //       <div className="flex flex-col">
-    //         <span className="text-4xl font-bold font-prata">E-Commerce </span>
-    //         <div>
-    //           <StatsCard />
-    //         </div>
-    //         <div>
-    //           <ProductDashboard />
-    //         </div>
-    //       </div>
-    //     );
-    //   case "Settings":
-    //     return <div>Settings Content</div>;
+        case "Specific Suppliers Network":
+        return (
+          <main className="overflow-hidden bg-stone-50">
+      <div className="flex max-md:flex-col">
+        <section className="w-full">
+          <div className="flex flex-col items-center w-full max-md:max-w-full">
+          
+            <div className="mt-8 w-full max-w-[1031px] max-md:max-w-full">
+              <h1 className="text-3xl font-bold text-neutral-800 max-md:max-w-full">
+                Supplier & Buyer Profile
+              </h1>
+              <ProfileCard />
+            </div>
+            <TabNavigation />
+            <PurchaseHistory />
+          </div>
+        </section>
+      </div>
+    </main>
+        )
+        case "AI-Based Risk Analysis":
+        return (
+          <div className="flex flex-col">
+            <span className="text-4xl font-bold font-prata">AI-Based Risk Analysis </span>
+            <div className="mt-4">
+              <p className="text-gray-700 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. 
+                Praesent euismod, nisl vitae aliquam ultricies, nisl nisl aliquet nisl, 
+                vitae aliquet nisl nisl vitae nisl.
+              </p>
+              <div className="flex justify-end">
+                <button className="bg-red-500 text-white px-4 py-2 rounded-lg">
+                  Action Button
+                </button>
+              </div>
+            </div>
+          </div>
+        )
       default:
         return (
           <div className="flex flex-col">
@@ -535,6 +294,7 @@ function AdminLayout() {
                 {/* Dropdown Arrow */}
               </div>
             </div>
+            {/* Layout */}
             <div className="w-[78%] absolute top-[91px] left-[22%] h-[calc(100vh-91px)] overflow-y-auto">
               <div className="w-full p-6">
                 {renderContent()}
