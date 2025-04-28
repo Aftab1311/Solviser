@@ -15,7 +15,8 @@ import { FiSearch } from "react-icons/fi";
 import TabNavigation from "./TabNavigation";
 import PurchaseHistory from "./PurchaseHistory";
 import ProfileCard from "./ProfileCard";
-
+import TransactionTable from "./TranscationTable";
+import TranscationHeader from "./TranscationHeader";
 
 
 function AdminLayout() {
@@ -110,15 +111,12 @@ function AdminLayout() {
           <div className="flex flex-col">
             <span className="text-4xl font-bold font-prata">AI-Based Risk Analysis </span>
             <div className="mt-4">
-              <p className="text-gray-700 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. 
-                Praesent euismod, nisl vitae aliquam ultricies, nisl nisl aliquet nisl, 
-                vitae aliquet nisl nisl vitae nisl.
-              </p>
-              <div className="flex justify-end">
-                <button className="bg-red-500 text-white px-4 py-2 rounded-lg">
-                  Action Button
-                </button>
+             <TranscationHeader/>
+              
+              <div className="flex ">
+               
+                <TransactionTable/>
+                
               </div>
             </div>
           </div>
