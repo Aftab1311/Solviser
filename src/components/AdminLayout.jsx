@@ -48,7 +48,7 @@ function AdminLayout() {
 
   const menuItems = [
     { name: "My Dashboard", icon:<MdDashboard size={28}/>},
-    { name: "AI-Based Risk Analysis", icon: <FaBrain size={28} />, dropdown: true },
+    { name: "AI-Based Risk Analysis", icon: <FaBrain size={28} />, dropdown: true  },
     { name: "Smart Contract", icon: <FaRegHandshake size={28} />, dropdown: true },
     { name: "Centralized Buyers Blocklist", icon: <FaUserFriends size={28} /> },
     { name: "Specific Suppliers Network", icon: <GiNetworkBars size={28} />, dropdown: true },
@@ -109,7 +109,7 @@ function AdminLayout() {
         case "AI-Based Risk Analysis":
         return (
           <div className="flex flex-col">
-            <span className="text-4xl font-bold font-prata">AI-Based Risk Analysis </span>
+           
             <div className="mt-4">
              <TranscationHeader/>
               
