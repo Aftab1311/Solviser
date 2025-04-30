@@ -15,10 +15,10 @@ import { FiSearch } from "react-icons/fi";
 import TabNavigation from "./TabNavigation";
 import PurchaseHistory from "./PurchaseHistory";
 import ProfileCard from "./ProfileCard";
-import TransactionTable from "./TranscationTable";
-import TranscationHeader from "./TranscationHeader";
-
-
+import RiskAssessment from "./RiskAssessment";
+import RiskScoreWidget from "./RiskScoreWidget";
+import AIPredictionCard from "./AIPredictionCard";
+import DefaultsAndDisputes from "./DefaultsAndDisputes";
 function AdminLayout() {
   const [openMenus, setOpenMenus] = useState({});
   const [activeMenu, setActiveMenu] = useState("My Dashboard");
@@ -89,8 +89,8 @@ function AdminLayout() {
         case "Specific Suppliers Network":
         return (
           <main className="overflow-hidden bg-stone-50">
-      <div className="flex max-md:flex-col">
-        <section className="w-full">
+         <div className="flex max-md:flex-col">
+         <section className="w-full">
           <div className="flex flex-col items-center w-full max-md:max-w-full">
           
             <div className="mt-8 w-full max-w-[1031px] max-md:max-w-full">
@@ -108,14 +108,14 @@ function AdminLayout() {
         )
         case "AI-Based Risk Analysis":
         return (
-          <div className="flex flex-col">
+          <div className="flex ">
            
             <div className="mt-4">
-             <TranscationHeader/>
-              
-              <div className="flex ">
-               
-                <TransactionTable/>
+            <RiskAssessment />
+            <AIPredictionCard/>
+            <DefaultsAndDisputes/>
+              <div className="flex  ">
+                <RiskScoreWidget/>
                 
               </div>
             </div>
