@@ -15,8 +15,11 @@ const AiRisk = () => {
     return (
         <div>
             <div className="w-full flex items-center  flex-col gap-8">
-            <RiskAssessment />
-                     <div className="w-full flex justify-between px-2 gap-4">
+              <div className="w-full flex items-start px-2">
+              <RiskAssessment />
+              </div>
+           
+              <div className="w-full flex justify-between px-2 gap-4">
                      
                      <AIPredictionCard />
                      <DefaultsAndDisputes />

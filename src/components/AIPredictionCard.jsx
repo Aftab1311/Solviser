@@ -6,7 +6,7 @@ import PerformanceTrend from "./PerformanceTrend";
 import AlertMessage from "./AlertMessage";
 const AIPredictionCard = () => {
   return (
-    <article className="flex flex-col justify-center p-6 bg-white rounded-lg shadow-md w-full max-md:px-5">
+    <article className="flex flex-col justify-center p-6 bg-white rounded-lg shadow-md w-full ">
       <CardHeader />
 
       <section className="mt-4  bg-opacity-0 max-md:max-w-full">
