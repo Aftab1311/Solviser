@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 import AdminLayout from './components/AdminLayout.jsx'
+import AiRisk from './Pages/AiRisk.jsx'
 
 // Sample Dashboard component for testing AdminLayout
 const Dashboard = () => (
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </AdminLayout>
           } 
         />
+         <Route path='/ai-risk' element={<AiRisk/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
